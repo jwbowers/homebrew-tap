@@ -6,13 +6,13 @@
 class AwsJupyter < Formula
   desc "CLI tool for launching Jupyter Lab instances on AWS EC2 Graviton processors"
   homepage "https://github.com/scttfrdmn/aws-jupyter"
-  version "0.3.3"
+  version "0.3.4"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.3/aws-jupyter_Darwin_x86_64.tar.gz"
-      sha256 "39480996db9a1c4f34647761467d0853b10d69b246343c088e062803022f37d4"
+      url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.4/aws-jupyter_Darwin_x86_64.tar.gz"
+      sha256 "7115d82b1b2ddc7db601ac984f465ec8cfab883e189c472f8b7fc23cd75c1f03"
 
       def install
         bin.install "aws-jupyter"
@@ -20,8 +20,8 @@ class AwsJupyter < Formula
       end
     end
     on_arm do
-      url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.3/aws-jupyter_Darwin_arm64.tar.gz"
-      sha256 "2ab8f2694bf6d808ee3032eb5165bbcdf7805faf0b9979e548395076eb587aee"
+      url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.4/aws-jupyter_Darwin_arm64.tar.gz"
+      sha256 "dbda99a97391a2539c90d74316faa8f0b402590d5258e604f6e01efd0b2db2be"
 
       def install
         bin.install "aws-jupyter"
@@ -33,8 +33,8 @@ class AwsJupyter < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.3/aws-jupyter_Linux_x86_64.tar.gz"
-        sha256 "0252e0cae609af41382d419363aab6243c1e7269e777a083d97f968544cc76f9"
+        url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.4/aws-jupyter_Linux_x86_64.tar.gz"
+        sha256 "77516f4def8e60b09f884fe84de192fca8988b1b9cd9974586118fa118ac8dd5"
 
         def install
           bin.install "aws-jupyter"
@@ -44,8 +44,8 @@ class AwsJupyter < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.3/aws-jupyter_Linux_arm64.tar.gz"
-        sha256 "f4180e530af09e0776d178e0686c6523ace4b59a75175465f2832040188410fa"
+        url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v0.3.4/aws-jupyter_Linux_arm64.tar.gz"
+        sha256 "1a771f3611954159aa87b3fa6186567d2c39263ed8e346ffc6890f5bc8434931"
 
         def install
           bin.install "aws-jupyter"
