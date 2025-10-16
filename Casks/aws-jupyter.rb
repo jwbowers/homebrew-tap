@@ -3,7 +3,7 @@ cask "aws-jupyter" do
   name "aws-jupyter"
   desc "CLI tool for launching Jupyter Lab instances on AWS EC2 Graviton processors"
   homepage "https://github.com/scttfrdmn/aws-jupyter"
-  version "0.3.4"
+  version "0.4.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "aws-jupyter" do
   on_macos do
     on_intel do
       url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v#{version}/aws-jupyter_Darwin_x86_64.tar.gz"
-      sha256 "7115d82b1b2ddc7db601ac984f465ec8cfab883e189c472f8b7fc23cd75c1f03"
+      sha256 "d2a8caa425c3ca552bf7e2e464741e4124beade590baac82c67f597ed1478d48"
     end
     on_arm do
       url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v#{version}/aws-jupyter_Darwin_arm64.tar.gz"
-      sha256 "dbda99a97391a2539c90d74316faa8f0b402590d5258e604f6e01efd0b2db2be"
+      sha256 "be4dabb365ba420eed1b7eb8dad5d9ccf32e85b942f58e62a41bc00257759fe7"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v#{version}/aws-jupyter_Linux_x86_64.tar.gz"
-      sha256 "77516f4def8e60b09f884fe84de192fca8988b1b9cd9974586118fa118ac8dd5"
+      sha256 "e4967fe796b2889fcef3c0a75670cae7ec52d062d7f3c02016eb9def00ee4d2f"
     end
     on_arm do
       url "https://github.com/scttfrdmn/aws-jupyter/releases/download/v#{version}/aws-jupyter_Linux_arm64.tar.gz"
-      sha256 "1a771f3611954159aa87b3fa6186567d2c39263ed8e346ffc6890f5bc8434931"
+      sha256 "a771449a71bf7512cdc8157a75e6b85e99b44732cf4921d2a33beb01f0847610"
     end
   end
 
