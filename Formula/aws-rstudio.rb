@@ -5,41 +5,69 @@
 class AwsRstudio < Formula
   desc "CLI tool for launching RStudio Server instances on AWS EC2 Graviton processors"
   homepage "https://github.com/scttfrdmn/aws-ide"
-  version "0.5.0"
+  version "0.5.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.0/aws-rstudio_Darwin_x86_64.tar.gz"
-      sha256 "a61cadc579424b3fcc4e8b08ae03cadba6b32d659b7d5b50c1a6993e42bb0fd3"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.1/aws-rstudio_Darwin_x86_64.tar.gz"
+      sha256 "57cad1638b1547e7411ea0cce2fe86f4ce602cea7e1158c1b6747ec53462b259"
 
       def install
         bin.install "aws-rstudio"
+
+        # Install environment templates
+        pkgshare.install Dir["apps/rstudio/environments/*.yaml"]
+        (pkgshare/"environments").mkpath
+        Dir["apps/rstudio/environments/*.yaml"].each do |env|
+          (pkgshare/"environments").install env
+        end
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.0/aws-rstudio_Darwin_arm64.tar.gz"
-      sha256 "a864904a5d2efcb70d8ccd244303b9acb1da04b091a5a6a4d9bd8df23057c123"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.1/aws-rstudio_Darwin_arm64.tar.gz"
+      sha256 "c83e6a545a35ff0ba824163546dc4e5e2bbfdda2410d434989a3baeebe25bb1d"
 
       def install
         bin.install "aws-rstudio"
+
+        # Install environment templates
+        pkgshare.install Dir["apps/rstudio/environments/*.yaml"]
+        (pkgshare/"environments").mkpath
+        Dir["apps/rstudio/environments/*.yaml"].each do |env|
+          (pkgshare/"environments").install env
+        end
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.0/aws-rstudio_Linux_x86_64.tar.gz"
-      sha256 "642f9c664ae9e9100c1ee0e6dd31d160aeb4d7d70aa588eff3a45503115a77d8"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.1/aws-rstudio_Linux_x86_64.tar.gz"
+      sha256 "0a15a8f632f6c525a797642c164e4eddc5ed1c1c3d36d1aaa5a87d8b3818f3ca"
       def install
         bin.install "aws-rstudio"
+
+        # Install environment templates
+        pkgshare.install Dir["apps/rstudio/environments/*.yaml"]
+        (pkgshare/"environments").mkpath
+        Dir["apps/rstudio/environments/*.yaml"].each do |env|
+          (pkgshare/"environments").install env
+        end
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.0/aws-rstudio_Linux_arm64.tar.gz"
-      sha256 "2880bdefd3c82ada24dd7dce6b25ef0335c02fd04cbd93c7d2a43e2f469e67c3"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.5.1/aws-rstudio_Linux_arm64.tar.gz"
+      sha256 "f888bec83bcce6801fc9d7aa38783a4f5e0a11c1b791839b0474c33e5a713858"
       def install
         bin.install "aws-rstudio"
+
+        # Install environment templates
+        pkgshare.install Dir["apps/rstudio/environments/*.yaml"]
+        (pkgshare/"environments").mkpath
+        Dir["apps/rstudio/environments/*.yaml"].each do |env|
+          (pkgshare/"environments").install env
+        end
       end
     end
   end
