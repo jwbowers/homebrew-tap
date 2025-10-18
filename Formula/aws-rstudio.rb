@@ -5,13 +5,13 @@
 class AwsRstudio < Formula
   desc "CLI tool for launching RStudio Server instances on AWS EC2 Graviton processors"
   homepage "https://github.com/scttfrdmn/aws-ide"
-  version "0.6.1"
+  version "0.6.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.1/aws-rstudio_Darwin_x86_64.tar.gz"
-      sha256 "97ecdf7d475dd4884e8b0331f9e3423c15d9ce74d80da012d286b8a176f67eed"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.2/aws-rstudio_Darwin_x86_64.tar.gz"
+      sha256 "0ffc935304cdac4fe90b6f154ddf40208bf852bdcca076ab04c297c20e80cb00"
 
       def install
         bin.install "aws-rstudio"
@@ -25,8 +25,8 @@ class AwsRstudio < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.1/aws-rstudio_Darwin_arm64.tar.gz"
-      sha256 "a7dd28ad73067e728fa4004b168782db23a72f12b15d2c6db49cd1ad8ff68ba4"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.2/aws-rstudio_Darwin_arm64.tar.gz"
+      sha256 "47599098d2d26cff4f27a83c3a9ba96de241596a34127a3bdcf24ecedb4b1470"
 
       def install
         bin.install "aws-rstudio"
@@ -43,8 +43,8 @@ class AwsRstudio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.1/aws-rstudio_Linux_x86_64.tar.gz"
-      sha256 "79f2be7763ef0709d2bc195e6b6e58dc76f40ed55b705c4a0061c7336252fcf8"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.2/aws-rstudio_Linux_x86_64.tar.gz"
+      sha256 "66ddedc74ff6a84beef8601937d23d5c10a07832a7e40463690d19e7133dcadf"
       def install
         bin.install "aws-rstudio"
 
@@ -57,8 +57,8 @@ class AwsRstudio < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.1/aws-rstudio_Linux_arm64.tar.gz"
-      sha256 "67da04ae17a39b6b5415a707eb7901311eaa8ee3bdf3e430692f185b8248af7d"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.6.2/aws-rstudio_Linux_arm64.tar.gz"
+      sha256 "19bba3814ef47cfeae33d39bc409f4e827e97ba69fea202b1e1733dba98378d8"
       def install
         bin.install "aws-rstudio"
 
