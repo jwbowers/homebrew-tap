@@ -5,13 +5,13 @@
 class AwsVscode < Formula
   desc "CLI tool for launching VSCode Server instances on AWS EC2 Graviton processors (Beta)"
   homepage "https://github.com/scttfrdmn/aws-ide"
-  version "0.7.0"
+  version "0.7.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.0/aws-vscode_Darwin_x86_64.tar.gz"
-      sha256 "a6c8db4d8a584024db29c154926c459a17532a87264776fdbfde733719204a1b"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.1/aws-vscode_Darwin_x86_64.tar.gz"
+      sha256 "4b32d83a1aed13084405ed1ea7c54803e707ba8667c003b7b756cb923782031c"
 
       def install
         bin.install "aws-vscode"
@@ -25,8 +25,8 @@ class AwsVscode < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.0/aws-vscode_Darwin_arm64.tar.gz"
-      sha256 "e3bea4d4c1fa92dbc4f7bd877515d854f448879d34c9f185951daa784984a509"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.1/aws-vscode_Darwin_arm64.tar.gz"
+      sha256 "3b7af6dc7441c6ad538004a8412f1026e23fc17717ad198bbeba0dc9460ea145"
 
       def install
         bin.install "aws-vscode"
@@ -43,8 +43,8 @@ class AwsVscode < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.0/aws-vscode_Linux_x86_64.tar.gz"
-      sha256 "1053dbfd3f517acc363afc47080e9ea2d96ceb56fbe7904d0419b264eef0549a"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.1/aws-vscode_Linux_x86_64.tar.gz"
+      sha256 "263e1a60262846ce90b4aa0929e9118029c2d71ddd0d3e4781e20aa4680f3866"
       def install
         bin.install "aws-vscode"
 
@@ -57,8 +57,8 @@ class AwsVscode < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.0/aws-vscode_Linux_arm64.tar.gz"
-      sha256 "291b5e508741abb010622d1835807623f03625e7457526a8e4393f02d992b5a4"
+      url "https://github.com/scttfrdmn/aws-ide/releases/download/v0.7.1/aws-vscode_Linux_arm64.tar.gz"
+      sha256 "07336b73365d84e90585773fdbfb7d090251ad6cc0616c8363adfe3c83de3b8c"
       def install
         bin.install "aws-vscode"
 
