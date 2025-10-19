@@ -5,15 +5,15 @@
 class Cloudworkstation < Formula
   desc "CLI tool for launching pre-configured cloud workstations for academic research"
   homepage "https://github.com/scttfrdmn/cloudworkstation"
-  version "0.5.4"
+  version "0.5.5"
   license "MIT"
 
   depends_on "go" => :build
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.4/cloudworkstation_0.5.4_darwin_x86_64.tar.gz"
-      sha256 "637857c0bbde86b5caed0659ee6ecb11febdaabbd1182cd8a10cd18e96cd50b3"
+      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.5/cloudworkstation_0.5.5_darwin_x86_64.tar.gz"
+      sha256 "6242b69eae1968772ba46ea60e9d489c1a13a6680618287e26876e8074588988"
 
       def install
         bin.install "cws"
@@ -31,8 +31,8 @@ class Cloudworkstation < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.4/cloudworkstation_0.5.4_darwin_arm64.tar.gz"
-      sha256 "e75160d1662b70d083081bae0e981a4c3cf0c4a1d5c12467e3f8ebd0f134cf74"
+      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.5/cloudworkstation_0.5.5_darwin_arm64.tar.gz"
+      sha256 "eb6fd3ce4800d6dbd565fdf4e580f9a229d851adb50a7cb30754d619927d3437"
 
       def install
         bin.install "cws"
@@ -53,8 +53,8 @@ class Cloudworkstation < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.4/cloudworkstation_0.5.4_linux_x86_64.tar.gz"
-      sha256 "73ff4c402e9bed54b66a7c9d94a28264b3085471f2f444512dbf8e643bcbde05"
+      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.5/cloudworkstation_0.5.5_linux_x86_64.tar.gz"
+      sha256 "f0a0a146520d5b2a21dd771b36668825ae921cbe49ae42b7eb9134b5f7c23b73"
       def install
         bin.install "cws"
         bin.install "cwsd"
@@ -71,8 +71,8 @@ class Cloudworkstation < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.4/cloudworkstation_0.5.4_linux_arm64.tar.gz"
-      sha256 "5ed23f6798eea8239440d9952d1449dd3f965670a6b5df0093a588e21b42d545"
+      url "https://github.com/scttfrdmn/cloudworkstation/releases/download/v0.5.5/cloudworkstation_0.5.5_linux_arm64.tar.gz"
+      sha256 "e6e24c1f851d80aa8ebc2c76e6b58ab84c286ca3c38ade5c3765ddb58da50a35"
       def install
         bin.install "cws"
         bin.install "cwsd"
