@@ -13,7 +13,7 @@ class Prism < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/scttfrdmn/prism/releases/download/v0.5.8/prism_0.5.8_darwin_x86_64.tar.gz"
-      sha256 "13606729df8514e8b2a07182aa4b2f9be0a526a69c3389674184bbf06f2c786c"
+      sha256 "2e8028f3ab5d03a6be6f0a0668e66d8d2038f3ccb07e2e40ba22820027a1b2d9"
 
       def install
         bin.install "prism"
@@ -32,7 +32,7 @@ class Prism < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/scttfrdmn/prism/releases/download/v0.5.8/prism_0.5.8_darwin_arm64.tar.gz"
-      sha256 "adb5e688f1e59b8549de05b478d43cd8010ef5342dbfb4a72c51df6eb0589c6c"
+      sha256 "893eb004fc977fe5d324d6f5bbeb471bcc00090a3d7d6ff3b396dd9478e59a2d"
 
       def install
         bin.install "prism"
@@ -54,7 +54,7 @@ class Prism < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/prism/releases/download/v0.5.8/prism_0.5.8_linux_x86_64.tar.gz"
-      sha256 "9d29946d1653aa4e79b91c091241a31566cb036c696490ea5c93f0c5913f4b0a"
+      sha256 "1cd4e3c7a6164b40084117901febf71e607f7f6d9a02d698355ed0ba35b094f1"
       def install
         bin.install "prism"
         bin.install "prismd"
@@ -72,7 +72,7 @@ class Prism < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/scttfrdmn/prism/releases/download/v0.5.8/prism_0.5.8_linux_arm64.tar.gz"
-      sha256 "7f9c84416fb2dca57a378f703c0b033af3fdf7a42e9b30751f512ba5e66f2250"
+      sha256 "0d08accf885c7b34e0142f79abdbfc612442c888bf44a55fbe860f98fa5ecd10"
       def install
         bin.install "prism"
         bin.install "prismd"
